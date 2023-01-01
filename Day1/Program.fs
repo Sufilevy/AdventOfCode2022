@@ -1,13 +1,8 @@
 ﻿let caloriesOf (elf: string) =
-    elf.Split '\n'
-    |> Array.filter ((<>) "")
-    |> Array.map int
-    |> Array.sum
+    elf.Split '\n' |> Array.filter ((<>) "") |> Array.map int |> Array.sum
 
-let puzzleOne (input: string) = 
-    (input.Split "\n\n")
-    |> Array.map caloriesOf
-    |> Array.max
+let puzzleOne (input: string) =
+    (input.Split "\n\n") |> Array.map caloriesOf |> Array.max
 
 let puzzleTwo (input: string) =
     (input.Split "\n\n")
